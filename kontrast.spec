@@ -4,6 +4,17 @@ Version:	1.0.0
 Release:	1
 License:	GPLv3
 Source0:	https://download.kde.org/stable/kontrast/%{name}-%{version}.tar.xz
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Qml)
+BuildRequires:	cmake(Qt5QuickControls2)
+BuildRequires:	cmake(Qt5Svg)
+BuildRequires:	cmake(Qt5Sql)
+BuildRequires:	cmake(KF5Kirigami2)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(KF5Declarative)
 
 %description
 A tool that helps UI designers find colors with sufficient contrast
