@@ -1,8 +1,9 @@
 Name:		kontrast
 Summary:	Contrast checker
-Version:	1.0.0
+Version:	1.0.2
 Release:	1
 License:	GPLv3
+URL:		https://kde.org/applications/cs/kontrast
 Source0:	https://download.kde.org/stable/kontrast/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
@@ -17,7 +18,7 @@ BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5Declarative)
 
 %description
-A tool that helps UI designers find colors with sufficient contrast
+A tool that helps UI designers find colors with sufficient contrast.
 
 %prep
 %autosetup -p1
