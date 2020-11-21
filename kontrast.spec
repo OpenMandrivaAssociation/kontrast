@@ -1,10 +1,12 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+
 Name:		kontrast
 Summary:	Contrast checker
-Version:	1.0.2
+Version:	20.11.80
 Release:	1
 License:	GPLv3
 URL:		https://kde.org/applications/cs/kontrast
-Source0:	https://download.kde.org/stable/kontrast/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Gui)
