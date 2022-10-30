@@ -3,7 +3,7 @@
 Name:		kontrast
 Summary:	Contrast checker
 Version:	22.08.2
-Release:	1
+Release:	2
 License:	GPLv3
 URL:		https://kde.org/applications/cs/kontrast
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
