@@ -2,7 +2,7 @@
 
 Name:		kontrast
 Summary:	Contrast checker
-Version:	22.08.3
+Version:	22.12.0
 Release:	1
 License:	GPLv3
 URL:		https://kde.org/applications/cs/kontrast
@@ -31,7 +31,7 @@ A tool that helps UI designers find colors with sufficient contrast.
 
 %install
 %ninja_install -C build
-%find_lang kontrast
+%find_lang kontrast --with-html
 
 %files -f kontrast.lang
 %{_bindir}/kontrast
