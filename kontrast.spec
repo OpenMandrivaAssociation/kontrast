@@ -2,7 +2,7 @@
 
 Name:		kontrast
 Summary:	Contrast checker
-Version:	23.04.3
+Version:	23.08.0
 Release:	1
 License:	GPLv3
 URL:		https://kde.org/applications/cs/kontrast
@@ -19,6 +19,7 @@ BuildRequires:	cmake(KF5Kirigami2)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5Declarative)
+BuildRequires:	cmake(FutureSQL5)
 
 %description
 A tool that helps UI designers find colors with sufficient contrast.
