@@ -3,7 +3,7 @@
 Name:		plasma6-kontrast
 Summary:	Contrast checker
 Version:	24.01.90
-Release:	2
+Release:	1
 License:	GPLv3
 URL:		https://kde.org/applications/cs/kontrast
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kontrast-%{version}.tar.xz
@@ -11,16 +11,24 @@ BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Qml)
+BuildRequires:  cmake(Qt6QmlCore)
+BuildRequires:  cmake(Qt6QmlNetwork)
 BuildRequires:	cmake(Qt6QuickControls2)
 BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(QCoro6)
+BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6Kirigami2)
 BuildRequires:	cmake(KF6I18n)
 BuildRequires:	cmake(KF6CoreAddons)
 BuildRequires:	cmake(KF6Declarative)
 BuildRequires:	cmake(FutureSQL6)
+BuildRequires:	qt6-qtbase-theme-gtk3
+BuildRequires:	qt6-qtbase-sql-postgresql
+BuildRequires:	qt6-qtbase-sql-odbc
+BuildRequires:	qt6-qtbase-sql-mariadb
+BuildRequires:	qt6-qtbase-sql-firebird
 
 %description
 A tool that helps UI designers find colors with sufficient contrast.
