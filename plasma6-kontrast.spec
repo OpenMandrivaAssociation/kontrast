@@ -2,7 +2,7 @@
 
 Name:		plasma6-kontrast
 Summary:	Contrast checker
-Version:	24.01.90
+Version:	24.01.95
 Release:	1
 License:	GPLv3
 URL:		https://kde.org/applications/cs/kontrast
