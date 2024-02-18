@@ -1,12 +1,19 @@
+%define git 20240218
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name:		plasma6-kontrast
 Summary:	Contrast checker
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:	GPLv3
 URL:		https://kde.org/applications/cs/kontrast
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/accessibility/kontrast/-/archive/%{gitbranch}/kontrast-%{gitbranchd}.tar.bz2#/kontrast-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kontrast-%{version}.tar.xz
+%endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6Gui)
@@ -34,7 +41,7 @@ BuildRequires:	qt6-qtbase-sql-firebird
 A tool that helps UI designers find colors with sufficient contrast.
 
 %prep
-%autosetup -p1 -n kontrast-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n kontrast-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
