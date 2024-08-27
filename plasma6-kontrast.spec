@@ -1,6 +1,6 @@
 #define git 20240218
-%define gitbranch release/24.02
-%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
+#define gitbranch release/24.02
+#define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name:		plasma6-kontrast
@@ -27,15 +27,11 @@ BuildRequires:	cmake(QCoro6)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6Kirigami2)
+BuildRequires:	cmake(KF6KirigamiAddons)
 BuildRequires:	cmake(KF6I18n)
 BuildRequires:	cmake(KF6CoreAddons)
 BuildRequires:	cmake(KF6Declarative)
 BuildRequires:	cmake(FutureSQL6)
-BuildRequires:	qt6-qtbase-theme-gtk3
-BuildRequires:	qt6-qtbase-sql-postgresql
-BuildRequires:	qt6-qtbase-sql-odbc
-BuildRequires:	qt6-qtbase-sql-mariadb
-BuildRequires:	qt6-qtbase-sql-firebird
 
 %description
 A tool that helps UI designers find colors with sufficient contrast.
