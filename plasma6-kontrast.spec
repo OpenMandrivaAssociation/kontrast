@@ -6,7 +6,7 @@
 Name:		plasma6-kontrast
 Summary:	Contrast checker
 Version:	24.12.3
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	GPLv3
 URL:		https://kde.org/applications/cs/kontrast
 %if 0%{?git:1}
