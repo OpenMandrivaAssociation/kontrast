@@ -3,7 +3,7 @@
 #define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
-Name:		plasma6-kontrast
+Name:		kontrast
 Summary:	Contrast checker
 Version:	25.04.0
 Release:	%{?git:0.%{git}.}1
