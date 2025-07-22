@@ -5,7 +5,7 @@
 
 Name:		kontrast
 Summary:	Contrast checker
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv3
 URL:		https://kde.org/applications/cs/kontrast
@@ -34,23 +34,15 @@ BuildRequires:	cmake(KF6CoreAddons)
 BuildRequires:	cmake(KF6Declarative)
 BuildRequires:	cmake(FutureSQL6)
 
+%rename plasma6-kontrast
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 A tool that helps UI designers find colors with sufficient contrast.
 
-%prep
-%autosetup -p1 -n kontrast-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-%find_lang kontrast --with-html
-
-%files -f kontrast.lang
+%files -f %{name}.lang
 %{_bindir}/kontrast
 %{_datadir}/applications/org.kde.kontrast.desktop
 %{_datadir}/icons/hicolor/scalable/apps/org.kde.kontrast.svg
