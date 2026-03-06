@@ -5,7 +5,7 @@
 
 Name:		kontrast
 Summary:	Contrast checker
-Version:	25.12.2
+Version:	25.12.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv3
 URL:		https://kde.org/applications/cs/kontrast
